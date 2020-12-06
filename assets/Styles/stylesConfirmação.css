@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+}
+
+.dot{
+    background-color: white;
+    height: 90px; 
+    width: 90px; 
+    border-radius: 50%; 
+    margin: 5px;
+}
+
+.dotNumber{
+    font-family: 'Fjalla One', sans-serif; 
+    text-align: center; 
+    font-size: 32px; 
+    padding-top: 20px;
+    color: #4D4D4D;
+}
+
+.dotText{
+    margin-top: 5px; 
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+}
+.resume{
+    width: 400px; 
+    border: 1px solid; 
+    display: inline-block; 
+    padding: 15px; 
+    position: absolute;
+    margin-top: 35px;
+    border-radius: 5px;
+    padding-bottom: 70px;
+}
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid gray;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: gray;
+}
+
+.cartao{
+    border: 1px solid black; 
+    margin-top: 35px; 
+    padding: 15px; 
+    border-radius: 5px;
+    margin-left: 50%; 
+    transform: translateX(-50%); 
+    height: 250px;
+}
+
+.nInput{
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.stInput{
+    width: 100%; 
+    border: 1px solid; 
+    border-color: #adadad; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    outline: none;
+}
+
+.logo{
+    text-align: center;
+    padding-top: 30px; 
+    letter-spacing:8px; 
+    font-size: 32px; 
+    font-weight: 500; 
+    padding-left: 5px;
+}
+
+.lg{
+    background-color: white; 
+    width: 150px; 
+    height: 100px; 
+    display: inline-block; 
+    margin: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+@media screen and (max-width: 768px){
+    .p1{
+        display: none;
+    }
+    .p2{
+        display: none;
+    }
+    .p3{
+        margin-left: 150px;
+    }
+
+    .lg{
+        margin-left: 125px;
+    }
+}

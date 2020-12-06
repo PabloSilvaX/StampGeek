@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+}
+
+.menuLink{
+    text-decoration: none;
+    color: rgb(114, 114, 114);
+}
+
+.menuLink:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+li{
+    display: inline;
+    padding-left: 15px;
+}
+
+.icon{
+    font-size: 24px;
+    padding-left: 30px;
+    color: white;
+}
+
+.iconP{
+    margin-left: -175px;
+}
+
+.icons{
+    margin-left: 50px; 
+    display: inline; 
+    margin-top: -50px
+}
+
+.iconC{
+    display: inline-block; 
+    margin-top: 50px;
+}
+
+.logo{
+    background-color: white;
+    height: 90px;
+    width: 150px;
+}
+
+.text{
+    padding-left: 25px;
+    color:#df8531;
+}
+
+.text:hover{
+    color:#d6a577;
+    text-decoration: none;
+
+}
+
+.bg-dark{
+    background-color: #4D4D4D!important;
+}
+
+.pesq{
+    width: 450px; 
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px; 
+    padding: 5px 25px; 
+    outline: none; 
+    display: inline; 
+    margin-left: 50px
+}
+
+.icon:hover{
+    color: rgb(182, 124, 48);
+}
+
+.subMenu{
+    margin-left: 50px;
+
+}
+
+.nInput{
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.stInput{
+    width: 100%; 
+    border: 1px solid; 
+    border-color: #adadad; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    outline: none;
+}
+@media screen and (max-width: 990px){
+    .icon{
+        display: inline-block;
+        margin-top: -25px;
+        margin-left: 25px;
+    }
+
+    .icons{
+        margin-top: 15px;
+
+    }
+
+    .text{
+        padding-left: 0;
+        padding-top: 15px;
+    }
+
+    .iconP{
+        margin-left: -25px;
+        margin-top: -60px;
+    }
+
+    .pesq{
+        margin-left: 0px;
+        width: 300px;
+    }
+
+    .iconC{
+        margin-top: 25px
+    }
+
+    .subMenu{
+        margin-left: 25px;
+    
+    }
+}
+
+.tamans{
+    display: none;
+}
+@media screen and (max-width: 1199px){
+    .icons{
+        margin-left: 250px
+    }
+
+    .subMenu{
+        margin-left: 25px;
+    
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}

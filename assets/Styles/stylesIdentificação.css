@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+}
+
+
+.dot{
+    background-color: white;
+    height: 90px; 
+    width: 90px; 
+    border-radius: 50%; 
+    margin: 5px;
+}
+
+.dotNumber{
+    font-family: 'Fjalla One', sans-serif; 
+    text-align: center; 
+    font-size: 32px; 
+    padding-top: 20px;
+    color: #4D4D4D;
+}
+
+.dotText{
+    margin-top: 5px; 
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+}
+
+.nInput{
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.stInput{
+    width: 100%; 
+    border: 1px solid; 
+    border-color: #adadad; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    outline: none;
+}
+
+@media screen and (max-width: 768px){
+    .p1{
+        margin-left: 35px;
+    }
+    .p2{
+        display: none;
+    }
+    .p3{
+        display: none;
+    }
+}
