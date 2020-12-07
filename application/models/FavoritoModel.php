@@ -45,29 +45,108 @@ class FavoritoModel extends CI_Model{
     public function gera_tabela(){
         $html ='';
 
-        $produtos = new FavoritoLib();
-        $data = $produtos->listafav();
+        $favoritos = new FavoritoLib();
+        $rito = $favoritos->listafav();
+        
+
+        $produtos = new ProdutoLib();
+        $data = $produtos->lista();
+
+  
+
 
         foreach ($data as $prod) {
 
-            if($this->session->userdata('id')===$prod['idcara']){
-            $html .= '<tr>';
-           
+
+          
+
+   
+    
+     
+
+    
+
+$favoritado = '0';
+           foreach ($rito as $fav) {
+             
+                                    $diminui = $prod['favoritados'] - 1;
+                                   
+
+                           if($prod['id']===$fav['idproduto']){
+                                  if($fav['idcara']===$this->session->userdata('id')){
+                                         $html .= '<div class="item">';
+                                   
+                                    $html .= '
+                                    <form method="POST" action="'.base_url('index.php/page/deletar_favorito/').'" class="mt-2">
+
+                                    <input value="';
+                                    $html .= $prod['id'];
+                                    $html .= '" type="hidden" name="idproduto" placeholder="" required>
+
+                                    <input value="';
+                                    $html .= $fav['id'];
+                                    $html .= '" type="hidden" name="id" placeholder="" required>
+
+                                    <input value="'.$diminui.'" type="hidden" name="favoritados" placeholder="" required>
+                                 
+                                    <button type="submit" style="border: none; outline: none; background-color: transparent;">
+                                  <a class="active" data-toggle="tooltip" data-placement="top" title="Remover dos Favoritos">  
+                                  <i class="fas fa-heart text-danger" style=" font-size: 35px; "></i>
+                                      </a>
+                                 </button>
+                                </form>            
+                                
+                                
+                                
+                                ';
 
 
+       
+                                $html .= '
+                                <a href="';
+                                $html .= base_url('index.php/loja/ver_produto/');
+                                $html .= $prod['id'];
+                                $html .= '"><img src="';
+                                $html .= base_url('uploads/');
+                                $html .= $prod['titulo_img'];
+                                $html .= '.jpg" 
+                                alt="thumbnail" class="img-thumbnail mt-2 mx-auto d-block"
+                                style="width: 250px; height:250px;">
+                                </a>';
+                                if($this->session->userdata('level')==='1'){
+                                $html .= '<div class="row mx-auto text center">';
+                                $html .= '<a class="mr-5 ml-3 text-dark" href="';
+                                $html .= base_url('index.php/loja/editar_produto/');
+                                $html .= $prod['id'];
+                                $html .= '">';
+                                $html .= " <i class='far fa-edit text-info'></i> Editar</a>";
+                        
+                        
+                                $html .= '<a class="ml-5 text-dark" href="';
+                                $html .= base_url('index.php/loja/deleta_produto/');
+                                $html .= $prod['id'];
+                                $html .= '">';
+                                $html .= " <i class='fas fa-times-circle text-danger'></i> Deletar</a></div>";
+                                }
+                        
+                                $html .= '<p style="text-align: center; margin-top: 5px;"><strong style="color: #FF8C00;">';
+                                $html .= $prod['nome'];
+                                $html .= '</strong><br>'.$prod['preco'].'</p>';
+                                $html .= '<a href="';
+                                $html .= base_url('index.php/loja/ver_produto/');
+                                $html .= $prod['id'];
+                                $html .= '"><button class="btn btn-warning btn-lg" style="margin-left: 25px; margin-top: 1px; width: 250px;">';
+                                $html .= ''.$prod['nome'].'</button></a></div>';
+                            
 
-            $html .= '<td><a href="'.$prod['linkprod'].'" class="text-dark"><img src="'.base_url('uploads/').''.$prod['titulo_img'].'.jpg" 
-            alt="thumbnail" class="img-thumbnail"
-  style="width: 200px"></a></td>';
+                                     $favoritado = $favoritado + '1';
+                                  }
+                                 
+                             }
+           }
 
-
-
-            $html .= '<td><h5><a href="'.$prod['linkprod'].'" class="text-dark">'.$prod['nomeproduto'].'</a></h5></td>';
-            $html .= '<td>'.$prod['precoproduto'].'</td>';
-            $html .= '<td>'.$this->action_buttons($prod['id']).'</td>';
-            $html .= '</tr>';   
-            }
-        }
+       
+    }
         return $html;
     }
  

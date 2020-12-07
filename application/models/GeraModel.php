@@ -146,7 +146,7 @@ class GeraModel extends CI_Model{
                                         <input value="'.$diminui.'" type="hidden" name="favoritados" placeholder="" required>
                                      
                                         <button type="submit" style="border: none; position: absolute; outline: none;">
-                                      <a class="active" data-toggle="tooltip" data-placement="top" title="Adicionar aos Favoritos">  
+                                      <a class="active" data-toggle="tooltip" data-placement="top" title="Remover dos Favoritos">  
                                       <i class="fas fa-heart text-danger" style="margin-left: 255px; font-size: 32px;
                                           position: absolute; "></i>
                                           </a>

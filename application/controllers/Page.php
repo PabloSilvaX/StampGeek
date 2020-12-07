@@ -297,7 +297,7 @@ public function cadastrar_favorito(){
 
 
 public function cadastrar_pedido(){
-  if($this->session->userdata('level')==='1'){
+  if($this->session->userdata('level')>'0'){
     $data['idcliente'] = $this->input->post('idcliente');
     $data['nomecliente'] = $this->input->post('nomecliente');
     $data['email'] = $this->input->post('email');
@@ -839,7 +839,7 @@ public function deletar($id){
 }
 
 public function deletando($id){
-  if($this->session->userdata('level')==='1'){
+  if($this->session->userdata('level')>'0'){
   $this->load->model('MensagemModel', 'model');
   $this->model->deleta_msg($id);
   redirect('page/mensagens');
