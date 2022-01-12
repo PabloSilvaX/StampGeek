@@ -169,7 +169,7 @@ class GeraModel extends CI_Model{
                       <input value="'.$this->session->userdata('id').'" class="w-100 text-white" type="hidden" name="idcara" placeholder="" required>
                       <input value="'.$prod['id'].'" class="w-100 text-white" type="hidden" name="idproduto" placeholder="" required>
                       <input value="'.$prod['nome'].'" class="w-100 text-white" type="hidden" name="nomeproduto" placeholder="" required>
-                      <input value="'.$prod['preco'].'" class="w-100 text-white" type="hidden" name="precoproduto" placeholder="" required>
+                      <input value="R$: '.$prod['preco'].'" class="w-100 text-white" type="hidden" name="precoproduto" placeholder="" required>
                       <input value="'.$prod['titulo_img'].'" class="w-100 text-white" type="hidden" name="titulo_img" placeholder="" required>
                       <input value="'.base_url('index.php/loja/ver_produto/').''.$prod['id'].'" class="w-100 text-white" type="hidden" name="linkprod" placeholder="" required>
                       
@@ -219,7 +219,7 @@ class GeraModel extends CI_Model{
 
             $html .= '<p style="text-align: center; margin-top: 5px;"><strong style="color: #FF8C00;">';
             $html .= $prod['nome'];
-            $html .= '</strong><br>'.$prod['preco'].'</p>';
+            $html .= '</strong><br>R$: '.$prod['preco'].'</p>';
             $html .= '<a href="';
             $html .= base_url('index.php/loja/ver_produto/');
             $html .= $prod['id'];
@@ -385,7 +385,7 @@ if($prod['id']===$primeiro||$prod['id']===$segundo||$prod['id']===$terceiro){
 
             $html .= '<p style="text-align: center; margin-top: 5px;"><strong style="color: #FF8C00;">';
             $html .= $prod['nome'];
-            $html .= '</strong><br>'.$prod['preco'].'</p>';
+            $html .= '</strong><br>R$: '.$prod['preco'].'</p>';
             $html .= '<a href="';
             $html .= base_url('index.php/loja/ver_produto/');
             $html .= $prod['id'];

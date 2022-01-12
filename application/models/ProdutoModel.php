@@ -52,6 +52,12 @@ class ProdutoModel extends CI_Model{
             }
             $html .= '</tr>';   
         }
+
+      
+
+
+
+
         return $html;
     }
     
